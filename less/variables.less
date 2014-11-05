@@ -2,13 +2,18 @@
 // Variables
 // --------------------------------------------------
 
-
 // Global values
 // --------------------------------------------------
 
+// Modlab Colors
+// -------------------------
+@modlab-yellow:          #FBC227;
+@modlab-light-gray:      #EBEBEB;
+@modlab-dark-gray:       #2A3B3E;
+@modlab-red:             #DA2B25;
+
 // Grays
 // -------------------------
-
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
@@ -18,7 +23,7 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:			#2461b2;
+@brand-primary:			   @modlab-dark-gray; //#2461b2;
 @brand-success:         spin(#5cb85c, -10);
 @brand-warning:         spin(#f0ad4e, -15);
 @brand-danger:          spin(#d9534f, -20);
@@ -27,7 +32,7 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #fff;
+@body-bg:               @modlab-light-gray;
 @text-color:            @gray-dark;
 
 // Links
@@ -39,7 +44,7 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  Raleway, Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  RoboSlab, Tungsten, Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -357,7 +362,7 @@
 // Pagination
 // -------------------------
 
-@pagination-bg:                        #fff;
+@pagination-bg:                        @modlab-dark-gray;
 @pagination-border:                    @brand-primary;
 
 @pagination-hover-bg:                  @gray-lighter;
