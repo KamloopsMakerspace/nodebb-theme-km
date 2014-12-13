@@ -5,17 +5,18 @@
 <input type="hidden" template-variable="pageCount" value="{pageCount}" />
 
 <ol class="breadcrumb">
+	<!-- BEGIN breadcrumbs -->
 	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<a href="{relative_path}/" itemprop="url"><span itemprop="title">[[global:home]]</span></a>
+		<!-- IF !@last --><a href="{breadcrumbs.url}" itemprop="url"><!-- ENDIF !@last -->
+			<span itemprop="title">
+				{breadcrumbs.text}
+				<!-- IF @last -->
+				<!-- IF !feeds:disableRSS --><a target="_blank" href="{relative_path}/category/{cid}.rss"><i class="fa fa-rss-square"></i></a><!-- ENDIF !feeds:disableRSS -->
+				<!-- ENDIF @last -->
+			</span>
+		<!-- IF !@last --></a><!-- ENDIF !@last -->
 	</li>
-	<!-- IF parent -->
-	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<a href="{relative_path}/category/{parent.slug}" itemprop="url"><span itemprop="title">{parent.name}</span></a>
-	</li>
-	<!-- ENDIF parent -->
-	<li class="active" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<span itemprop="title">{name} <a target="_blank" href="{relative_path}/category/{cid}.rss"><i class="fa fa-rss-square"></i></a></span>
-	</li>
+	<!-- END breadcrumbs -->
 </ol>
 
 <div class="subcategories row">
@@ -80,12 +81,13 @@
 								<p><strong><i class="fa fa-thumb-tack<!-- IF !topics.pinned --> hide<!-- ENDIF !topics.pinned -->"></i> <i class="fa fa-lock<!-- IF !topics.locked --> hide<!-- ENDIF !topics.locked -->"></i></strong>
 									<a href="{relative_path}/topic/{topics.slug}" itemprop="url" class="topic-title">{topics.title}</a><br />
 									<small>
-
-									<!-- IF topics.user.userslug -->
-									[[global:posted_ago_by, <span class="timeago" title="{topics.relativeTime}"></span>, {topics.user.username}]]
-									<!-- ELSE -->
-									[[global:posted_ago_by_guest, <span class="timeago" title="{topics.relativeTime}"></span>]]
-									<!-- ENDIF topics.user.userslug -->
+									[[global:posted_ago, <span class="timeago" title="{topics.relativeTime}"></span>]]
+									<!-- IF !topics.unreplied -->
+									<span class="hidden-md hidden-lg">
+									<br/>
+									<a href="{relative_path}/topic/{topics.slug}/{topics.teaser.index}">[[global:replied_ago, <span class="timeago" title="{topics.teaser.timestamp}"></span>]]</a>
+									</span>
+									<!-- ENDIF !topics.unreplied -->
 									<br/>
 									<!-- IMPORT partials/category_tags.tpl -->
 									</small>
@@ -127,8 +129,6 @@
 	</div>
 
 	<div widget-area="sidebar" class="col-md-3 col-xs-12 category-sidebar"></div>
-
-	<span class="hidden" id="csrf" data-csrf="{csrf}"></span>
 </div>
 
 <!-- IMPORT partials/move_thread_modal.tpl -->
