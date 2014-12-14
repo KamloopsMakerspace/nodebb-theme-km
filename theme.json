@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-modlab",
-    "name": "Modlab Theme for NodeBB",
-    "description": "A fork of Lavender theme wih customizations for http://community.modlab.ca",
-    "url": "https://github.com/modlabca/nodebb-theme-modlab",
+    "id": "nodebb-theme-km",
+    "name": "Kamloops Makerspace Theme for NodeBB",
+    "description": "A fork of Lavender theme wih customizations for http://community.kamloopsmakerspace.ca",
+    "url": "https://github.com/KamloopsMakerspace/nodebb-theme-km",
     "screenshot": "screenshot.png"
 }

@@ -1,15 +1,18 @@
 {
-  "name": "nodebb-theme-lavender",
+  "name": "nodebb-theme-km",
   "version": "0.2.3",
-  "description": "Lavender Theme for NodeBB",
+  "description": "Kamloops Makerspace Theme for NodeBB, based on Lavender",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-lavender"
+    "url": "https://github.com/KamloopsMakerspace/nodebb-theme-km"
   },
   "keywords": [
     "nodebb",
     "lavender",
+    "km",
+    "kamloops",
+    "makerspace",
     "theme",
     "themes"
   ],
@@ -17,6 +20,12 @@
     "name": "psychobunny",
     "email": "psycho.bunny@hotmail.com"
   },
+  "contributors": [
+    {
+      "name": "arasbm",
+      "email": "arasbm@gmail.com"
+    }
+  ],
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/psychobunny/nodebb-theme-lavender/issues"

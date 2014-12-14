@@ -3,7 +3,7 @@ $('document').ready(function() {
 		'lavender/masonry',
 		'lavender/imagesLoaded',
 	], function(Masonry, imagesLoaded) {
-		var fixed = localStorage.getItem('fixed') || 0,
+		var fixed = localStorage.getItem('masonry:fixed_width') || 0,
 			masonry;
 
 		function doMasonry() {
@@ -56,7 +56,7 @@ $('document').ready(function() {
 
 			var container = fixed ? $('.container-fluid') : $('.container');
 			container.toggleClass('container-fluid', fixed !== 1).toggleClass('container', fixed === 1);
-			localStorage.setItem('fixed', fixed);
+			localStorage.setItem('masonry:fixed_width', fixed);
 		}
 
 		resize(fixed);

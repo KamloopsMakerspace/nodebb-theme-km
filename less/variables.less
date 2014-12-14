@@ -5,12 +5,13 @@
 // Global values
 // --------------------------------------------------
 
-// Modlab Colors
+// kamloops makerspace Colors
 // -------------------------
-@modlab-yellow:          #FBC227;
-@modlab-light-gray:      #EBEBEB;
-@modlab-dark-gray:       #2A3B3E;
-@modlab-red:             #DA2B25;
+@km-gold:           #B76612;
+@km-light-gray:     #EBEBEB;
+@km-dark-gray:      #2A3B3E;
+@km-blue:           #162934;
+@km-purple:         #960F54;
 
 // Grays
 // -------------------------
@@ -23,7 +24,7 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:			   @modlab-dark-gray; //#2461b2;
+@brand-primary:			   @km-blue; //#2461b2;
 @brand-success:         spin(#5cb85c, -10);
 @brand-warning:         spin(#f0ad4e, -15);
 @brand-danger:          spin(#d9534f, -20);
@@ -32,14 +33,17 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               @modlab-light-gray;
+@body-bg:               @km-light-gray;
 @text-color:            @gray-dark;
 
 // Links
 // -------------------------
 
 @link-color:            @brand-primary;
-@link-hover-color:      darken(@link-color, 15%);
+@link-hover-color:      @km-purple; //darken(@link-color, 15%);
+
+@post-link-color:       @km-gold;
+@post-link-hover-color: @km-purple; //darken(@title-link-color, 5%);
 
 // Typography
 // -------------------------
@@ -362,7 +366,7 @@
 // Pagination
 // -------------------------
 
-@pagination-bg:                        @modlab-dark-gray;
+@pagination-bg:                        @km-dark-gray;
 @pagination-border:                    @brand-primary;
 
 @pagination-hover-bg:                  @gray-lighter;

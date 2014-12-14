@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-modlab",
+	"id": "nodebb-theme-km",
 	"library": "./lib/theme.js",
 	"hooks": [
 		{
